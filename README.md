@@ -10,6 +10,12 @@ Development done with Visual Studio Code on Ubuntu
 using HtmlAgilityPack for parsing HTML
 using Microsoft.EntityFrameworkCore.Sqlite for creating and accessing the sqlite database
 
+build:
+dotnet build hackthebox-activity-feed.csproj
+
+run:
+dotnet run hackthebox-activity-feed.csproj
+
 HF
 
 
