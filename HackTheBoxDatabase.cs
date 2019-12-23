@@ -33,7 +33,7 @@ namespace hackthebox_activity_feed
         }
 
         private static bool InsertActivity(ActivityModel activity){
-            Console.Write("InsertActivity:");
+            //Console.Write("InsertActivity:");
             bool ret = false;
             using (var connection = GetConnection()){
                 activity.activityHash = CreateSHA256Hash(activity);
@@ -55,12 +55,14 @@ namespace hackthebox_activity_feed
                 ret = true;
                 connection.Close();
             }
-            Console.WriteLine(ret);
+            //Console.WriteLine(ret);
+
+            Console.WriteLine("[+] " + activity.content);
             return ret;
         }
 
         private static bool ContentIsAlreadyInDatabase(ActivityModel activity){
-            Console.Write("ContentIsAlreadyInDatabase:");
+            //Console.Write("ContentIsAlreadyInDatabase:");
             bool ret = false;
             using (var connection = GetConnection()){
                 activity.activityHash = CreateSHA256Hash(activity);
@@ -80,7 +82,7 @@ namespace hackthebox_activity_feed
 
                 connection.Close();
             }
-            Console.WriteLine(ret);
+            //Console.WriteLine(ret);
             return ret;
         }
 

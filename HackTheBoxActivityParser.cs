@@ -62,6 +62,7 @@ namespace hackthebox_activity_feed
                             am.authorPicUrl = node.SelectNodes("div")[0].SelectSingleNode("a").InnerHtml;//node.SelectNodes("div")[0].SelectSingleNode("a").SelectSingleNode("img").Attributes["data-cfsrc"].Value;
                             am.postDate = node.SelectNodes("div")[1].SelectNodes("div[@class='Meta']")[0].SelectNodes("span")[0].InnerText;
 
+                            /*
                             Console.WriteLine("Created:");
                             Console.WriteLine("\tID:" + am.activityId);
                             Console.WriteLine("\tHASH:" + am.activityHash);
@@ -69,7 +70,8 @@ namespace hackthebox_activity_feed
                             Console.WriteLine("\tAuthorPic:" + am.authorPicUrl);
                             Console.WriteLine("\tContent:" + am.content);
                             Console.WriteLine("\tPost Date:" + am.postDate);
-
+                            */
+                            
                             activities.Add(am);
                         }
                     }
